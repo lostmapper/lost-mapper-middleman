@@ -3,25 +3,29 @@ title: Home
 description: Wandering in the world of map-making, cartography and GIS
 ---
 
-<h1>Hi folks, I'm the <nobr>Lost Mapper!</nobr></h1>
+<h1>Hi folks, I'm the
+  <nobr>Lost Mapper!</nobr>
+</h1>
 
 <div class="center">
-  <img src="/images/little-river-canyon.jpeg" width="100%" />
+  <img src="/images/little-river-canyon.jpeg" width="100%"/>
 </div>
 
-<p>I'm wandering in the world of cartography and geographic information systems, all the while sharing what I learn with you!</p>
+<p>I'm wandering in the world of cartography and geographic information systems, all the while sharing what I learn with
+  you!</p>
 
 <p>Watch my tutorials on <a href="https://www.youtube.com/@lostmapper">YouTube</a> and follow me on
   <a rel="me" href="https://mapstodon.space/@lostmapper">Mastodon</a>.</p>
 
-<p>You can also check out my <a href="/resources">Resources</a> page or feel free to <a href="/contact">Contact Me</a>.</p>
+<p>You can also check out my <a href="/resources">Resources</a> page or feel free to <a href="/contact">Contact Me</a>.
+</p>
 
-<div class="iframe-container">
-  <iframe src="https://www.youtube.com/embed/videoseries?si=FGAeG43tzlo8T9l3&amp;list=PLdRAAf7DYidjPjh2vpXzjet4lbXEsirK-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
+<h2>Featured Videos &amp; Playlists</h2>
 
-<div class="iframe-container">
-  <iframe src="https://www.youtube.com/embed/videoseries?si=as1mxY8zMteXcPfi&amp;list=PLdRAAf7DYidjV-KpOjVtsxGH4euovbcmn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
+<% data.videos.ids.each do |id| %>
+  <div class="iframe-container">
+    <iframe src="https://www.youtube.com/embed/<%= id %>" title="Lost Mapper Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+<% end %>
 
 <p>If you're super curious, you can learn more <a href="/about">About Me</a>.</p>
