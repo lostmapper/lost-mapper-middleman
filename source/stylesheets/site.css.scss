@@ -1,17 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;700&family=Space+Mono&display=swap');
 
 body {
   padding: 16px;
   max-width: 640px;
   margin: auto;
   font-family: 'Kumbh Sans', sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.8rem;
 }
 
 h1, h2 {
   font-weight: bold;
-  text-align: center;
   line-height: 2.4rem;
 }
 
@@ -21,6 +20,13 @@ dt {
 
 img {
   border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+}
+
+code {
+  font-size: 1.0rem;
+  font-family: "Space Mono";
 }
 
 .iframe-container {
@@ -57,4 +63,12 @@ img {
 
 .float-end {
   float: right;
+}
+
+pre {
+  border: 1px solid #ddd;
+  background: #eee;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  border-radius: 4px;
 }
