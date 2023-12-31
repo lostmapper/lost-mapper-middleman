@@ -11,9 +11,9 @@ From my explorations over the years it seems that Python is a particularly impor
 
 I use several different programming languages in my day-to-day and after using various tools over the years have settled on using [asdf](https://asdf-vm.com/) to install and manage those languages.
 
-asdf makes it easy to install multiple versions of a language and switch between them as your projects require. They provide extensive documentation on [Installing asdf](https://asdf-vm.com/guide/getting-started.html).
+`asdf` makes it easy to install multiple versions of a language and switch between them as your projects require. They provide extensive documentation on [Installing asdf](https://asdf-vm.com/guide/getting-started.html).
 
-Once asdf is installed we can add its Python plugin, install the latest version of Python, and set that version as our default:
+Once `asdf` is installed we can add its Python plugin, install the latest version of Python, and set that version as our global default:
 
     $ asdf plugin add python
     $ asdf install python latest
@@ -31,7 +31,7 @@ Now that Python is installed we can create a directory for our project:
     $ cd lostmapper
     $ asdf local python 3.11.5
 
-Here we are making a directory for our project and switching into it. The last line creates a `.tools-version` file that lets asdf know what version of Python we want to use whenever we're working in that directory.
+Here we are making a directory for our project and switching into it. The last line creates a `.tools-version` file that lets `asdf` know what version of Python we want to use whenever we're working in that directory.
 
 ## Create and Activate a Virtual Environment
 
@@ -61,7 +61,7 @@ I use a tool called [Starship](https://starship.rs/) that gives me a succinct an
 
 For example, at this point, my prompt looks like this:
 
-![macOS Terminal session with a Starship-enhanced prompt](https://cdn-images-1.medium.com/max/2120/1*87H4N34OKX2x0SN24TzcCA.png)*macOS Terminal session with a Starship-enhanced prompt*
+    lostmapper.com on main via 🐍 v3.11.5 (.venv)
 
 And yes, different languages have their own little emoji!
 
@@ -73,7 +73,7 @@ If we want to add the mkdocs package to our project, we would do the following:
 
     $ python -m pip install mkdocs
 
-If we look in .venv/lib/python3.11/site-packages we can see that mkdocs has been installed along with all the packages it depends on.
+If we look in `.venv/lib/python3.11/site-packages` we can see that mkdocs has been installed along with all the packages it depends on.
 
 ## Freeze and Share Required Packages
 
@@ -83,7 +83,7 @@ To generate a list of packages, run the following:
 
     $ python -m pip freeze > requirements.txt
 
-This creates a requirements.txt file in our project that we or others can use to install the same packages we're using. The file could be named anything but requirements.txt seems to be the agreed-upon standard for Python projects.
+This creates a `requirements.txt` file in our project that we or others can use to install the same packages we're using. The file could be named anything but `requirements.txt` seems to be the agreed-upon standard for Python projects.
 
 Here’s what ours looks like now:
 
@@ -113,7 +113,7 @@ To install all the same packages on another computer, run the following command 
 
 ## Summary
 
-We’ve learned how to install Python using asdf, create virtual environments using venv, and add and track packages using pip. This should help us feel a little less lost when working on Python projects moving forward.
+We’ve learned how to install Python using `asdf`, create virtual environments using `venv`, and add and track packages using `pip`. This should help us feel a little less lost when working on Python projects moving forward.
 
 As one might guess, these are not the only tools available for managing Python versions and packages but for the most part, we’re leaning on what’s built in with Python — modules that should always be available once Python is installed.
 
